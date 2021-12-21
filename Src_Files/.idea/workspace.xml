@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="21bec24a-1c7f-4872-a3ff-50700373cefd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="22YSuOilBTy74UwnX7rpk13HVAg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/spigot-api-1.18.1-R0.1-20211218.003816-5.jar" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21bec24a-1c7f-4872-a3ff-50700373cefd" name="Default Changelist" comment="" />
+      <created>1640013253076</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640013253076</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="734" y="351" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1640013919402">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="734" y="351" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.0.1920.1032/1516.-1080.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1640013919402" />
+    <state x="1010" y="486" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1640013794211">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="1010" y="486" key="#com.intellij.ide.util.TreeClassChooserDialog/2560.0.1920.1032/1516.-1080.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1640013794211" />
+    <state x="986" y="437" key="FileChooserDialogImpl" timestamp="1640013336250">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="986" y="437" key="FileChooserDialogImpl/2560.0.1920.1032/1516.-1080.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1640013336250" />
+    <state x="760" y="270" width="1477" height="851" key="SettingsEditor" timestamp="1640014112135">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="760" y="270" width="1477" height="851" key="SettingsEditor/2560.0.1920.1032/1516.-1080.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1640014112135" />
+    <state x="662" y="316" key="new project wizard" timestamp="1640014182556">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="662" y="316" key="new project wizard/2560.0.1920.1032/1516.-1080.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1640014182556" />
+  </component>
+</project>

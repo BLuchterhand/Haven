@@ -1,0 +1,4 @@
+name: NoSpawn
+version: '${project.version}'
+main: com.bengboo.nospawn.NoSpawn
+api-version: 1.18
