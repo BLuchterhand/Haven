@@ -48,6 +48,11 @@ public final class NoSpawn extends JavaPlugin {
 
     private void importRepellers() {
         repellerFile = new File(getDataFolder(), "repellers.list");
+        if (!repellerFile.exists()) {
+            repellerFile.getParentFile().mkdirs();
+            saveResource("repellers.list", false);
+        }
+
         BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader(repellerFile));
