@@ -5,7 +5,7 @@ Format: x,y,z,radius
 
 Add new entries to the list, reload the server plugins.
 
-TO DO:
+# TO DO:
 Dynamically add new coordinates, commands.
 Add "allowed" zones within denied zones, to allow smaller areas such as mob spawners within a larger denied zone.
 
