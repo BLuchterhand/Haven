@@ -11,6 +11,8 @@ Haven is a super simple plugin that allows you to deny most hostile mob spawn in
 
 /haven list
 
+PERMISSIONS: Requires "Haven.basics"
+
 
 # Disclaimer!
 This is a super simple plugin that works primarily for my own limited purposes. It is likely inefficient, as it's my first real exposure to Minecraft plugin development and one of my first Java programs. 
