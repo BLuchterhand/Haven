@@ -1,4 +1,10 @@
-name: NoSpawn
+name: Haven
 version: '${project.version}'
-main: com.bengboo.nospawn.NoSpawn
+main: com.bengboo.nospawn.Haven
 api-version: 1.18
+
+commands:
+  haven:
+    description: Haven API
+    usage: /haven <list/create/delete>
+    permission: yourplugin.yourcommandpermission

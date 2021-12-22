@@ -1,4 +1,5 @@
 package com.bengboo.nospawn.events;
+import com.bengboo.nospawn.Haven;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
@@ -12,10 +13,9 @@ import java.util.Arrays;
 
 
 public class EntitySpawns implements Listener {
-    int x = 450;
-    int z = -573;
 
     int[][] repellers;
+    Haven plugin;
 
     EntityType[] banned_mobs = {
             EntityType.ZOMBIE,
@@ -40,8 +40,8 @@ public class EntitySpawns implements Listener {
             EntityType.BAT
     };
 
-    public EntitySpawns(int[][] _repellers) {
-        repellers = _repellers;
+    public EntitySpawns(Haven _plugin) {
+        plugin = _plugin;
     }
 
     @EventHandler
@@ -51,14 +51,13 @@ public class EntitySpawns implements Listener {
             int event_x = loc.getBlockX();
             int event_z = loc.getBlockZ();
 
-            for (int index = 0; index < repellers.length; index++) {
-                int diff_x = (event_x - repellers[index][0]) * (event_x - repellers[index][0]);
-                int diff_z = (event_z - repellers[index][2]) * (event_z - repellers[index][2]);
+            for (int index = 0; index < plugin.repellers.length; index++) {
+                int diff_x = (event_x - plugin.repellers[index][0]) * (event_x - plugin.repellers[index][0]);
+                int diff_z = (event_z - plugin.repellers[index][2]) * (event_z - plugin.repellers[index][2]);
                 double distance = Math.sqrt(diff_x + diff_z);
 
-                if (distance < repellers[index][3]) {
+                if (distance < plugin.repellers[index][3]) {
                     event.setCancelled(true);
-                    // Bukkit.broadcastMessage("Prevented " + event.getEntityType() + " spawn...");
                 }
             }
         }

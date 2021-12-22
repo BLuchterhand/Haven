@@ -1,5 +1,6 @@
 package com.bengboo.nospawn;
 
+import com.bengboo.nospawn.commands.NewHaven;
 import com.bengboo.nospawn.events.EntitySpawns;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -12,14 +13,14 @@ import java.util.Arrays;
 
 import static java.lang.Integer.parseInt;
 
-public final class NoSpawn extends JavaPlugin {
+public final class Haven extends JavaPlugin {
 
     /* File Paths */
     public static File nospawn;
     private static String mainDirectory;
 
     private File customConfigFile;
-    private File repellerFile;
+    public static File repellerFile;
     private FileConfiguration customConfig;
 
     public int[][] repellers = {
@@ -65,8 +66,7 @@ public final class NoSpawn extends JavaPlugin {
                 int z = parseInt(line_info[2]);
                 int radius = parseInt(line_info[3]);
 
-                repellers = Arrays.copyOf(repellers, repellers.length +1);
-                repellers[repellers.length-1] = new int[] {x, y, z, radius};
+                repellers = addRepeller(repellers, x, y, z, radius);
 
                 line = reader.readLine();
             }
@@ -77,13 +77,22 @@ public final class NoSpawn extends JavaPlugin {
         }
     }
 
+    public static int[][] addRepeller(int[][] _repellers, int x, int y, int z, int radius) throws IOException {
+        int[][] new_repellers = Arrays.copyOf(_repellers, _repellers.length +1);
+        new_repellers[new_repellers.length-1] = new int[] {x, y, z, radius};
+        System.out.println("HERE");
+
+        return new_repellers;
+    }
+
     @Override
     public void onEnable() {
         // Plugin startup logic
         createCustomConfig();
         importRepellers();
-        getServer().getPluginManager().registerEvents(new EntitySpawns(repellers), this);
 
+        this.getCommand("haven").setExecutor(new NewHaven(this));
+        getServer().getPluginManager().registerEvents(new EntitySpawns(this), this);
     }
 
     @Override

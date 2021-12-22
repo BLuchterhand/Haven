@@ -1,0 +1,96 @@
+{
+  "todo": [
+    {
+      "assignedTo": {
+        "name": "BLuchterhand"
+      },
+      "category": "Feature",
+      "creation_time": "2021-12-21T23:03:19.994Z",
+      "details": {
+        "content": "Create a config to allow users to enable or disable certain mobs from the list",
+        "mime": "text/markdown"
+      },
+      "id": "1",
+      "prio": 3,
+      "references": [],
+      "title": "Blocked Mobs Config"
+    },
+    {
+      "assignedTo": {
+        "name": "BLuchterhand"
+      },
+      "category": "Feature",
+      "creation_time": "2021-12-21T23:08:59.863Z",
+      "description": {
+        "content": "Clean up code, make presentable",
+        "mime": "text/markdown"
+      },
+      "id": "5",
+      "prio": 3,
+      "references": [],
+      "title": "Go Public with Github"
+    },
+    {
+      "assignedTo": {
+        "name": "BLuchterhand"
+      },
+      "category": "Feature",
+      "creation_time": "2021-12-21T23:08:13.517Z",
+      "description": {
+        "content": "This would be like /reload but would be specific to Haven, requires Commands to be integrated first.",
+        "mime": "text/markdown"
+      },
+      "id": "4",
+      "prio": 3,
+      "references": [
+        "2"
+      ],
+      "title": "Reload Command Specifically for Haven"
+    },
+    {
+      "assignedTo": {
+        "name": "BLuchterhand"
+      },
+      "category": "Feature",
+      "creation_time": "2021-12-21T23:06:08.709Z",
+      "id": "3",
+      "prio": 1,
+      "references": [],
+      "title": "Allow Different Types of Zones (Different Mob Configs)"
+    }
+  ],
+  "in-progress": [],
+  "testing": [],
+  "done": [
+    {
+      "assignedTo": {
+        "name": "BLuchterhand"
+      },
+      "category": "Feature",
+      "creation_time": "2021-12-21T23:04:34.910Z",
+      "description": {
+        "content": "Add commands for creating new zones",
+        "mime": "text/markdown"
+      },
+      "id": "2",
+      "prio": 4,
+      "references": [],
+      "title": "Commands"
+    },
+    {
+      "assignedTo": {
+        "name": "BLuchterhand"
+      },
+      "category": "Feature",
+      "creation_time": "2021-12-22T15:54:04.421Z",
+      "description": {
+        "content": "zone list command\nmatch delete parameters in file, remove line",
+        "mime": "text/markdown"
+      },
+      "id": "6",
+      "prio": 4,
+      "references": [],
+      "title": "Delete Zone Command (Simple)"
+    }
+  ]
+}
