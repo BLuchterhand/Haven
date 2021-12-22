@@ -7,4 +7,3 @@ commands:
   haven:
     description: Haven API
     usage: /haven <list/create/delete>
-    permission: yourplugin.yourcommandpermission
