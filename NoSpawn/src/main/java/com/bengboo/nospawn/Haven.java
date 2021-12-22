@@ -36,8 +36,6 @@ public final class Haven extends JavaPlugin {
             saveResource("config.yml", false);
         }
 
-        System.out.print("Created \n");
-
         customConfig= new YamlConfiguration();
         try {
             customConfig.load(customConfigFile);
@@ -80,7 +78,6 @@ public final class Haven extends JavaPlugin {
     public static int[][] addRepeller(int[][] _repellers, int x, int y, int z, int radius) throws IOException {
         int[][] new_repellers = Arrays.copyOf(_repellers, _repellers.length +1);
         new_repellers[new_repellers.length-1] = new int[] {x, y, z, radius};
-        System.out.println("HERE");
 
         return new_repellers;
     }

@@ -41,7 +41,6 @@ public class NewHaven implements CommandExecutor {
                     bw.newLine();
                     bw.close();
 
-                    System.out.println("WRITTEN");
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -83,10 +82,8 @@ public class NewHaven implements CommandExecutor {
                     tempFile.renameTo(plugin.repellerFile);
 
                 } catch (FileNotFoundException e) {
-                    System.out.println("file not found");
                     e.printStackTrace();
                 } catch (IOException e) {
-                    System.out.println("Other exception");
                     e.printStackTrace();
                 }
 
