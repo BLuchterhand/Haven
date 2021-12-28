@@ -11,6 +11,9 @@ Haven is a super simple plugin that allows you to deny most hostile mob spawn in
 
 /haven list
 
+As of v0.2.0, the following command can be used to create an "allowed" zone that permits spawning in an area that is covered in a spawn-denying haven:
+/haven allow x y z radius
+
 PERMISSIONS: Requires "Haven.basics"
 
 
