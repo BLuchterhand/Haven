@@ -21,5 +21,3 @@ PERMISSIONS: Requires "Haven.basics"
 # Disclaimer!
 This is a super simple plugin that works primarily for my own limited purposes. It is likely inefficient, as it's my first real exposure to Minecraft plugin development and one of my first Java programs. This plugin currently DOES NOT allow you to modify the banned mobs list! This will be an upcoming feature! If you need to modify it for now, you'll have to do so (rather easily) in the code and build it yourself.
 
-# TO DO:
-Add "allowed" zones within denied zones, to allow smaller areas such as mob spawners within a larger denied zone.
