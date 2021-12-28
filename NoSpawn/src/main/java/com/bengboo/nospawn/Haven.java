@@ -21,11 +21,18 @@ public final class Haven extends JavaPlugin {
 
     private File customConfigFile;
     public static File repellerFile;
+    public static File allowedFile;
     private FileConfiguration customConfig;
 
     public int[][] repellers = {
             {
                 0, 0, 0, 0
+            },
+    };
+
+    public int[][] allowed = {
+            {
+                    0, 0, 0, 0
             },
     };
 
@@ -52,8 +59,16 @@ public final class Haven extends JavaPlugin {
             saveResource("repellers.list", false);
         }
 
+        allowedFile = new File(getDataFolder(), "allowed.list");
+        if (!allowedFile.exists()) {
+            allowedFile.getParentFile().mkdirs();
+            saveResource("allowed.list", false);
+        }
+
         BufferedReader reader;
         try {
+
+            // Import repellers
             reader = new BufferedReader(new FileReader(repellerFile));
             String line = reader.readLine();
             while (line != null) {
@@ -65,9 +80,24 @@ public final class Haven extends JavaPlugin {
                 int radius = parseInt(line_info[3]);
 
                 repellers = addRepeller(repellers, x, y, z, radius);
-
                 line = reader.readLine();
             }
+
+            // import allowed zones
+            reader = new BufferedReader(new FileReader(allowedFile));
+            line = reader.readLine();
+            while (line != null) {
+                String[] line_info = line.split(",");
+
+                int x = parseInt(line_info[0]);
+                int y = parseInt(line_info[1]);
+                int z = parseInt(line_info[2]);
+                int radius = parseInt(line_info[3]);
+
+                allowed = addRepeller(allowed, x, y, z, radius);
+                line = reader.readLine();
+            }
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

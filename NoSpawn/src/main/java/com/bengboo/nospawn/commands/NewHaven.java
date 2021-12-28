@@ -12,7 +12,6 @@ import static java.lang.Integer.parseInt;
 
 public class NewHaven implements CommandExecutor {
 
-    int[][] repellers;
     Haven plugin;
 
     public NewHaven(Haven _plugin) {
@@ -25,6 +24,28 @@ public class NewHaven implements CommandExecutor {
         int x, y, z, radius;
 
         switch (args[0]) {
+            case "allow":
+                x = parseInt(args[1]);
+                y = parseInt(args[2]);
+                z = parseInt(args[3]);
+                radius = parseInt(args[4]);
+
+                try {
+                    plugin.allowed = Haven.addRepeller(plugin.allowed, x, y, z, radius);
+
+                    FileWriter fw = new FileWriter(plugin.allowedFile, true);
+                    BufferedWriter bw = new BufferedWriter(fw);
+                    String output = x + "," + y + "," + z + "," + radius;
+                    bw.write(output);
+                    bw.newLine();
+                    bw.close();
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                break;
             case "create":
                 x = parseInt(args[1]);
                 y = parseInt(args[2]);
@@ -55,6 +76,8 @@ public class NewHaven implements CommandExecutor {
                 radius = parseInt(args[4]);
 
                 String line = x + "," + y + "," + z + "," + radius;
+
+                // repellers file
                 File tempFile = new File(plugin.getDataFolder(), "repellers.list.temp");
 
                 for (int index = 0; index < plugin.repellers.length; index++) {
@@ -63,9 +86,8 @@ public class NewHaven implements CommandExecutor {
                     }
                 }
 
-
-
                 try {
+                    // repeller
                     BufferedReader reader = new BufferedReader(new FileReader(plugin.repellerFile));
                     BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
@@ -87,11 +109,49 @@ public class NewHaven implements CommandExecutor {
                     e.printStackTrace();
                 }
 
+                // allowed file
+                tempFile = new File(plugin.getDataFolder(), "allowed.list.temp");
+
+                for (int index = 0; index < plugin.allowed.length; index++) {
+                    if (x == plugin.allowed[index][0] && y == plugin.allowed[index][1] && z == plugin.allowed[index][2] && radius == plugin.allowed[index][3]){
+                        plugin.allowed = (int[][]) ArrayUtils.remove(plugin.allowed, index);
+                    }
+                }
+
+                try {
+                    // allowed
+                    BufferedReader reader = new BufferedReader(new FileReader(plugin.allowedFile));
+                    BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+                    String currentLine;
+                    while((currentLine = reader.readLine()) != null) {
+                        String trimmedLine = currentLine.trim();
+                        if(trimmedLine.equals(line)) continue;
+                        writer.write(currentLine + System.getProperty("line.separator"));
+                    }
+
+                    writer.close();
+                    reader.close();
+                    plugin.allowedFile.delete();
+                    tempFile.renameTo(plugin.allowedFile);
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
                 break;
 
             case "list":
+                sender.sendMessage("Repellers: ");
                 for (int index = 0; index < plugin.repellers.length; index++) {
                     sender.sendMessage(plugin.repellers[index][0] + " " + plugin.repellers[index][1] + " " + plugin.repellers[index][2] + " " + plugin.repellers[index][3]);
+                }
+
+                sender.sendMessage("Allowed Zones: ");
+                for (int index = 0; index < plugin.allowed.length; index++) {
+                    sender.sendMessage(plugin.allowed[index][0] + " " + plugin.allowed[index][1] + " " + plugin.allowed[index][2] + " " + plugin.allowed[index][3]);
                 }
 
                 break;
