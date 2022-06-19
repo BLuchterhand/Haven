@@ -1,6 +1,6 @@
 # Haven - A simple spawn-control plugin for Minecraft 1.18
 
-Inspired Mob Repellent 2.0, a discountinued 1.11 plugin that finally broke (for me) somewhere in 1.18:
+Inspired by Mob Repellent 2.0, a discountinued 1.11 plugin that finally broke (for me) somewhere in 1.18:
 https://www.spigotmc.org/resources/mob-repellent-2-0.7196/
 
 Haven is a super simple plugin that allows you to deny most hostile mob spawn in an area. The following commands can be used:
